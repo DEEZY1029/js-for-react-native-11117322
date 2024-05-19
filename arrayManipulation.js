@@ -13,3 +13,20 @@ if (num % 2 === 0) {
  }
 const calculatedArray = processArray(actualArray);
  console.log(calculatedArray);
+
+ const stringArray= ['even','even','odd','even','odd'];
+function  formatArrayStrings(Strings , numbers){
+    return Strings.map(function(str, num){
+        if (numbers[num] % 2 === 0){
+            return str.toUpperCase();
+        }
+
+        else {
+            return str.toLowerCase();
+        }
+
+    });
+}
+const calculatedStringsArray =  formatArrayStrings(stringArray, actualArray);
+console.log(calculatedStringsArray);
+module.exports = {calculatedStringsArray, stringArray};
